@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cia::S3::Utils
 
 TODO: Write a gem description
@@ -27,3 +28,9 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+=======
+cia-s3-utils
+============
+
+s3 utilities
+>>>>>>> bff0f456b3d76c95661c44af1bb504c36e08a4ca
