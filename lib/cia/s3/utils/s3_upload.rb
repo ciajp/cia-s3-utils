@@ -92,7 +92,7 @@ module Cia
                   # For the sake of the example, we'll leave it simple
                   #
 
-                  puts "[#{Thread.current["file_number"]}/#{@total_files}] uploading..."
+                  puts "[#{Thread.current["file_number"]}/#{@total_files}] uploading... #{path}"
                   @progress[PROGRESS_KEY] = Thread.current["file_number"]
 
                   ext = Pathname.new(file.name).extname.gsub(/\./, '').to_s
