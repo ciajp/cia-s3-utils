@@ -27,4 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'rubyzip'
   spec.add_runtime_dependency 'aws-sdk'
 
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'simplecov'
 end
