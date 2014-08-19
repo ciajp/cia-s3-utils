@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "bundler", "~> 1.6"
   spec.add_runtime_dependency "rake"
-  spec.add_runtime_dependency "byebug"
+  spec.add_runtime_dependency "pry-byebug"
   spec.add_runtime_dependency 'mime-types'
   spec.add_runtime_dependency "actionpack"
   spec.add_runtime_dependency 'activesupport'
