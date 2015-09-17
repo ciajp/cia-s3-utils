@@ -5,6 +5,7 @@ gemspec
 
 gem 'mime-types'
 gem "actionpack", '~> 4.2.4'
+gem "aws-s3"
 gem 'activesupport'
 gem 'rubyzip'
 gem 'aws-sdk'
