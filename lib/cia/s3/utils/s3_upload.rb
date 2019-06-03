@@ -77,11 +77,12 @@ module Cia
           thread_count.times do |i|
             @threads[i] = Thread.new {
               until @files.empty?
+                file = nil
                 mutex.synchronize do
                   file_number += 1
                   Thread.current["file_number"] = file_number
+                  file = @files.pop rescue nil
                 end
-                file = @files.pop rescue nil
                 next unless file
 
                 path = "#{@dir}/#{file}"
