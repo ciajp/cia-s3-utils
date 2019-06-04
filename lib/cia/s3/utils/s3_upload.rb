@@ -76,6 +76,7 @@ module Cia
 
           thread_count.times do |i|
             @threads[i] = Thread.new {
+              Thread.current["name"] = i
               until @files.empty?
                 file = nil
                 mutex.synchronize do
@@ -93,7 +94,7 @@ module Cia
                   # For the sake of the example, we'll leave it simple
                   #
 
-                  puts "[#{Thread.current["file_number"]}/#{@total_files}] uploading... #{path}"
+                  puts "#{Thread.current["name"]}:[#{Thread.current["file_number"]}/#{@total_files}] uploading... #{path}"
                   @progress[PROGRESS_KEY] = Thread.current["file_number"]
 
                   ext = Pathname.new(file.name).extname.gsub(/\./, '').to_s
@@ -117,8 +118,8 @@ module Cia
                 if block_given?
                   yield Thread.current["file_number"], @total_files
                 end
-
               end
+              puts "thread finish (thread: #{Thread.current["name"]})"
             }
           end
           @threads.each { |t| t.join }
