@@ -119,6 +119,11 @@ module Cia
                   yield Thread.current["file_number"], @total_files
                 end
               end
+
+              # finish
+              if block_given?
+                yield @total_files, @total_files
+              end
               puts "thread finish (thread: #{Thread.current["name"]})"
             }
           end
