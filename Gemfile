@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'mime-types'
-gem "actionpack", '~> 5.2'
+gem "actionpack", '~> 6.0.0'
 gem 'activesupport'
 gem 'rubyzip'
 gem 'aws-sdk', '~> 1.66.0'

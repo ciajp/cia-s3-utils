@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "rake"
   spec.add_runtime_dependency "pry-byebug"
   spec.add_runtime_dependency 'mime-types'
-  spec.add_runtime_dependency "actionpack", '~> 5.2'
+  spec.add_runtime_dependency "actionpack", '~> 6.0.0'
   spec.add_runtime_dependency 'activesupport'
   spec.add_runtime_dependency 'rubyzip'
   spec.add_runtime_dependency 'aws-sdk', '~> 1.66.0'
